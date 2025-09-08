@@ -1,1 +1,1065 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #000000, #0ff);
+    /* Gradient background */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+/* Header Section */
+.header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 50px 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    text-align: left;
+}
+
+.header-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    animation: slideLeftp 1s ease forwards;
+    opacity: 0;
+}
+
+.btn1 {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0ff;
+    color: #333;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #0ff;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+
+}
+.nav ul {
+    font-weight: 500;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+.nav ul li {
+    margin: 0 15px;
+
+}
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.3s;
+    display: flex;
+    justify-content: center;
+    /* border-bottom: 2px solid #0ff; */
+}
+.nav ul li a:hover {
+    color: #0ff;
+    transform: scale(1.1);
+    border-bottom: 2px solid #0ff;
+}
+.navbar-toggler{
+    color: #0ff;
+    transform: scale(1.1);
+    border-bottom: 2px solid #0ff;
+}
+.heading1 {
+    color: #0ff;
+}
+.heading2{
+    font-size: 75px;
+    letter-spacing: 1px;
+    animation: slideRight 0.5s ease forwards;
+     animation-delay: 0.5s; 
+}
+i {
+    position: relative;
+    border: 2px solid #0ff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    color: #0ff;
+    transition: 0.3ms;
+    animation: socielIcons 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+
+i:hover {
+    box-shadow: 0 0 20px #0ff;
+}
+.part1{
+    animation: part1 1s ease forwards;
+    /* animation-delay: 1s; */
+    opacity: 0;
+}
+.part2{
+    animation: part2 1s ease forwards;
+    /* animation-delay: 1s; */
+    opacity: 0;
+}
+@keyframes navMenu {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes part1 {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes part2 {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes heading2 {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideLeftp {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes socielIcons {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Styling for the About Me Section */
+#about {
+    /* background-color: #1a1a1a; */
+    color: #e0e0e0; /* Light gray text for readability */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #131313; /* Silver color for heading */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    color: #d3d3d3; /* Slightly lighter gray for the paragraph text */
+    line-height: 1.8;
+    max-width: 800px; /* Keep paragraph centered and not too wide */
+    margin: 0 auto; /* Center the paragraph */
+    padding: 15px;
+    background-color: #2b2b2b; /* Darker background for the paragraph card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+    text-align: justify; /* Justified text for a neat layout */
+}
+
+/* Optional hover effect for paragraph */
+#about p:hover {
+    background-color: #333; /* Slight color change on hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Animation for fade-in effect */
+.animate__animated.animate__fadeIn {
+    animation-duration: 1.5s;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2rem;
+    }
+    
+    #about p {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* Section Styling */
+.section {
+    padding: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section Styling */
+#skills {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#skills h2 {
+    font-size: 2.5rem;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #c0c0c0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Skills container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Individual skill block styling */
+.skill {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    /* background-color: #2b2b2b; */
+    color: #d3d3d3;
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* opacity: 0;
+    transform: translateY(30px); */
+}
+/* Icon styling */
+.skill i {
+    font-size: 2.5rem;
+    color: #c0c0c0; /* Silver color for icons */
+    margin-bottom: 10px;
+}
+
+/* Skill name styling */
+.skill p {
+    margin: 0;
+    font-size: 1rem;
+    color: #d3d3d3;
+}
+
+/* Hover effect */
+.skill:hover {
+    background-color: #333;
+    transform: translateY(-10px); /* Pop up effect on hover */
+}
+
+/* Animation for sequential skill appearance */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Applying sequential animation delay for each skill */
+.skill:nth-child(1) {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.skill:nth-child(2) {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.skill:nth-child(3) {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.9s;
+}
+
+.skill:nth-child(4) {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.skill:nth-child(5) {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 1.5s;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    #skills h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Experience Section */
+#experience {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: e0e0e0; /* Light background to match theme */
+}
+
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.experience-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-bottom: 4px solid #0ff; /* Highlight color */
+}
+
+.experience-card h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.experience-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.experience-card:hover h3 {
+    color: #0ff;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.experience-card {
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* Education Section Styling */
+#education {
+    background: linear-gradient(135deg, #000000, #0ff);
+    color: #1d1e1e; /* Neon blue text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#education h2 {
+    font-size: 2.5rem;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #00ffff; /* Neon blue for the heading */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Education container */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Education card styling */
+.education-card {
+    background-color: #1a1a1a;  
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.5); /* Neon blue shadow for depth */
+    text-align: left;
+    opacity: 0; /* Initially hidden for animation */
+    transform: translateY(30px); /* Start position for animation */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative; /* To handle image positioning */
+    overflow: hidden;
+}
+
+/* Image styling */
+.education-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left; /* Float the image to the left */
+}
+
+/* Heading and paragraph in cards */
+.education-card h3 {
+    color: #00ffff; /* Neon blue */
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.education-card p {
+    color: #d3d3d3; /* Light gray for the paragraph */
+    font-size: 1.2rem;
+}
+
+/* Hover effect on education cards */
+.education-card:hover {
+    transform: translateY(-10px); /* Pop-up effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.7); /* Stronger neon blue glow */
+}
+
+/* Animation for sequential appearance */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Applying sequential animation delay */
+.education-card:nth-child(1) {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.education-card:nth-child(2) {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.8s;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .education-card {
+        max-width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .education-card img {
+        float: none;
+        margin: 0 auto 20px auto;
+    }
+
+    #education h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Certificate Container */
+.certificate-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: center; /* Centers the cards */
+}
+
+/* Certificate Card */
+.certificate-card {
+    background: rgba(0, 0, 0, 0.85); /* Dark background for contrast */
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid rgba(0, 255, 255, 0.5); /* Neon border */
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.3);
+    color: #ffffff; /* White text for readability */
+    width: 80%; /* Adjust width for better appearance */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect - Neon Glow */
+.certificate-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.7);
+    border-color: rgba(0, 255, 255, 0.9);
+}
+
+/* Animated Glow Border */
+.certificate-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+    transition: 0.5s;
+}
+
+.certificate-card:hover::before {
+    left: 100%;
+}
+
+/* Heading */
+.certificate-card h3 {
+    color: #00ffff; /* Neon blue */
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Description */
+.certificate-card p {
+    color: #d3d3d3; /* Light gray text */
+    font-size: 1.2rem;
+}
+
+/* Fade-in Animation for Cards */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Applying Sequential Animation */
+.certificate-card:nth-child(1) {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.certificate-card:nth-child(2) {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.certificate-card:nth-child(3) {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.certificate-card:nth-child(4) {
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 1.6s;
+}
+
+
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    font-size: 2rem;
+    color: #111; /* Darker icon color */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #555; /* Slightly lighter on hover */
+    transform: scale(1.2);
+}
+
+
+/* Projects Section Styling */
+#projects {
+    background-color: #0a0a0a; /* Black background */
+    color: #00ffff; /* Neon blue for text */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    color: #00ffff; /* Neon blue for the heading */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Projects container */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Individual project card */
+.project {
+    /* background: linear-gradient(135deg, #000000, #00ffff); */
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.5); /* Neon blue shadow */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Project title */
+.project h3 {
+    color: #00ffff; /* Neon blue for the project title */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Project description */
+.project p {
+    color: #d3d3d3; /* Light gray for description */
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Project link button */
+.project-link {
+    display: inline-block;
+    background-color: #00ffff; /* Neon blue for button */
+    color: #0a0a0a; /* Black text */
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for the project link */
+.project-link:hover {
+    background-color: #0a0a0a; /* Inverse colors on hover */
+    color: #00ffff;
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.7); /* Neon blue glow */
+}
+
+/* Hover effect on project cards */
+.project:hover {
+    transform: translateY(-10px); /* Pop up effect */
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.7); /* Stronger glow on hover */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .project {
+        max-width: 100%;
+    }
+
+    #projects h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* Responsive layout adjustments */
+@media (max-width: 767.98px) {
+    .header {
+        text-align: center;
+    }
+
+    .header-content {
+        margin-bottom: 20px;
+    }
+
+    .header img {
+        margin: 0 auto;
+        display: block;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1999px) {
+    .container {
+        width: 100%; 
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .header-content {
+        text-align: center; 
+    }
+}
+@media (min-width: 250px) and (max-width: 450px) {
+    .container {
+        width: 100%; 
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .header-content {
+        text-align: center; 
+    }
+}
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header" >
+        <nav class="nav navbar navbar-expand-lg text-white float-end">
+            <a class="navbar-brand" href="#home">My Portfolio</a>
+            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-left mt-4">
+                    <div class="header-content">
+                        <h3 class="part1">Hi! It's Me</h3>
+                        <h1 class="heading2">Arslan Fayyaz</h1>
+                        <h3>and I am <span class="heading1 part2" id="changing-text">Fronted web Developer</span></h3>
+                        <p>I'm a passionate developer skilled in HTML, TailwindCss, JavaScript, GitHub, and Bootstrap, React.js </p>
+                        <!-- <a href="" ><i class="uil uil-facebook-f" style="--i:7"></i></a> -->
+                        <!-- <a href=""><i class="uil uil-instagram" style="--i:8"></i></a> -->
+                        <a href="https://www.linkedin.com/in/arslan-fayyaz-889048300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="uil uil-linkedin" style="--i:9"></i></a>
+                        <br>
+                        <button id="download-cv" class="btn1 hire-me animate__animated animate__fadeIn animate__delay-2s mt-4">Download
+                            CV</button>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="section animate__animated animate__fadeIn">
+        <h2 class="heading3">About Me</h2>
+        <p class="card1 mx-auto">
+            "Hello! I'm Arslan Fayyaz,With a unique blend of scientific curiosity and coding creativity, I'm driven to bridge the gap between
+             and innovative solutions. My expertise spans HTML, CSS, JavaScript, and UI/UX principles. I'm
+            eager to leverage my hybrid skillset to craft impactful web applications and solutions for various
+            industries.
+            Let's connect and explore how my distinctive blend of web development expertise can benefit your
+            projects." 
+
+           
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section animate__animated animate__fadeIn">
+        <h2 class="heading3">Skills</h2>
+        <div class="skills-container">
+            <div class="skill animate__animated">
+                <i class="fas fa-code"></i>
+                <p>HTML</p>
+            </div>
+            <div class="skill animate__animated">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS</p>
+            </div>
+            <div class="skill animate__animated">
+                <i class="fab fa-js"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill animate__animated">
+                <i class="fab fa-bootstrap"></i>
+                <p>Bootstrap</p>
+            </div>
+            <div class="skill animate__animated">
+                <i class="fab fa-github"></i>
+                <p>GitHub</p>
+            </div>
+            <div class="skill animate__animated">
+                <i class="fab fa-react"></i>
+                <p>React.js</p>
+            </div>
+            <div class="skill animate__animated">
+                <i class="fas fa-database"></i>
+                <p>MongoDB</p>
+            </div>
+            <div class="skill animate__animated">
+                <i class="fas fa-server"></i>
+                <p>Express.js</p>
+            </div>
+            <div class="skill animate__animated">
+                <i class="fab fa-node-js"></i>
+                <p>Node.js</p>
+            </div>
+            <div class="skill animate__animated">
+                <i class="fas fa-fire"></i>
+                <p>Firebase</p>
+            </div>
+            <div class="skill animate__animated">
+                <i class="fab fa-css3-alt"></i>
+                <p>Tailwind CSS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section animate__animated animate__fadeIn">
+        <h2 class="heading3">Experience</h2>
+        <div class="experience-container">
+            <div class="experience-card animate__animated">
+                <h3>Social Swril - Intern</h3>
+                <p><strong>02/2025 - 03/2025</strong></p>
+                <p>I am doing an Internship there and along with guidance of heads I use to develop business websites and Different Apps which enhance my skills.</p>
+            </div>
+            <div class="experience-card animate__animated">
+                <h3>Intern Intelligence - Intern</h3>
+                <p><strong>01/2025 - 02/2025</strong></p>
+                <p>By using React.js, Tailwind CSS and API Integration through Firebase I made most realistic websites there.</p>
+            </div>
+           
+        </div>
+    </section>
+    
+
+  <!-- Education Section -->
+<section id="education" class="section animate__animated animate__fadeIn">
+    <h2>Education</h2>
+    <div class="education-container">
+        <div class="education-card animate__animated">
+            <img src="images/download-removebg-preview.png" alt="Geology Degree">
+            <h3>Bachelor's Degree in Computer Science</h3>
+            <p>The University Of Lahore (2023-2027)</p>
+        </div>
+        <div class="education-card animate__animated">
+            <img src="images/smit.png" alt="Fronted Web Development">
+            <h3>Web  Development Skills</h3>
+            <p>SMIT (2023-2024)</p>
+        </div>
+    </div>
+</section>
+
+<!-- Certificates Section -->
+<section id="certificates" class="section animate__animated animate__fadeIn">
+    <h2>Certificates & Achievements</h2>
+    <div class="certificate-container">
+        <div class="certificate-card animate__animated">
+            <h3> - Front-end Web Development from Course era</h3>
+            <p>Successfully attended and completed the Front-end Web Development Hackathon, organized by Microsoft Student Ambassadors.</p>
+        </div>
+        <div class="certificate-card animate__animated">
+            <h3>Web Development  2024</h3>
+            <p>Completed a three-day frontend development course era organized by  in affiliation with HEC</p>
+        </div>
+        
+    </div>
+</section>
+
+
+
+<!-- Projects Section -->
+<section id="projects" class="section animate__animated animate__fadeIn">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+        <div class="project">
+            <h3>SignUp Form-Quiz App</h3>
+            <p>This project involves using HTML, CSS, and JavaScript to create an interactive web application.</p>
+            <a href=" https://hamnaiman.github.io/Quiz-App-user-Inform/ " target="_blank" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <h3>E-Commerce-website</h3>
+            <p>This project is  built with Bootstrap and JavaScript, featuring a responsive design.</p>
+            <a href="https://gotrolly.netlify.app/" target="_blank" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <h3>Hepta clone website</h3>
+            <p>This project is a dynamic website built with Bootstrap and JavaScript, featuring a responsive design.</p>
+            <a href="https://steady-tiramisu-80977b.netlify.app/" target="_blank" class="https://steady-tiramisu-80977b.netlify.app/">View Project</a>
+        </div>
+        <div class="project">
+            <h3>Quiz Application</h3>
+            <p> This project is a dynamic quiz application built with Bootstrap and JavaScript, featuring a responsive design.</p>
+            <a href="https://hamnaiman.github.io/Quiz-Application/" target="_blank" class="project-link">View Project</a>
+        </div>
+        <div class="project">
+            <h3>Image Gallery</h3>
+            <p> This project is a dynamic website built with Bootstrap and JavaScript, featuring a responsive design.</p>
+            <a href="https://hamnaiman.github.io/Image-Gallery/" target="_blank" class="project-link">View Project</a>
+        </div>
+ 
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="section animate__animated animate__fadeIn animate__delay-4s">
+    <h2>Contact Me</h2>
+    <div class="contact-icons">
+        <a href="officialarslan50@gmail.com" title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://github.com/Arslan123-567/E-COMMERCE-WEBSITE" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/arslan-fayyaz-889048300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <!-- Add more icons as needed -->
+    </div>
+</section>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="app.js"></script>
+    <!-- Include Animate.css library -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
